@@ -1,0 +1,18 @@
+$background: #f7f2ef;
+body {
+  background-color: $background;
+}
+.inner {
+  width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  padding: 80px 0;
+}
+section {
+  position: relative;
+}
+#footer {
+  background: #382f2d;
+  color: white;
+}

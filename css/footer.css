@@ -1,0 +1,90 @@
+.footer_wrap .inner {
+  width: 1440px;
+  height: auto;
+}
+.footer_wrap .inner .foot_top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #585454;
+}
+.footer_wrap .inner .foot_top .top_LBox h2 {
+  font-size: 40px;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer_wrap .inner .foot_top .top_LBox div {
+  display: flex;
+  flex-direction: column;
+}
+.footer_wrap .inner .foot_top .top_LBox div span {
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.footer_wrap .inner .foot_top .top_RBox {
+  text-align: right;
+}
+.footer_wrap .inner .foot_top .top_RBox .phone strong {
+  font-size: 40px;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.footer_wrap .inner .foot_top .top_RBox .phone p {
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-bottom: 2px;
+}
+.footer_wrap .inner .foot_bottom {
+  padding-top: 30px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #9c9796;
+  font-size: 14px;
+}
+.footer_wrap .inner .foot_bottom .bot_left .link_area {
+  display: flex;
+}
+.footer_wrap .inner .foot_bottom .bot_left .link_area a {
+  color: #9c9796;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.footer_wrap .inner .foot_bottom .bot_left .link_area a:first-child {
+  font-weight: 600;
+  color: white;
+}
+.footer_wrap .inner .foot_bottom .bot_left .addr {
+  display: flex;
+}
+.footer_wrap .inner .foot_bottom .bot_left .addr p {
+  margin-right: 10px;
+}
+.footer_wrap .inner .foot_bottom .bot_right .link_site {
+  width: 200px;
+  justify-content: space-between;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 200;
+  margin-bottom: 20px;
+  border: 1px solid #585454;
+  border-radius: 5px;
+  display: flex;
+  font-size: 18px;
+  color: white;
+  padding: 10px 20px;
+}
+.footer_wrap .inner .foot_bottom .bot_right .foot_logo img {
+  width: 210px;
+}

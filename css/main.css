@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.visual {
+  position: relative;
+}
+.visual .inner {
+  width: 1700px;
+  margin-top: 20px;
+  height: 600px;
+}
+.visual .inner ul {
+  position: relative;
+}
+.visual .inner ul li {
+  position: absolute;
+}
+.visual .inner ul li a {
+  position: relative;
+  display: block;
+  width: 1700px;
+  height: 600px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.visual .inner ul li a:nth-child(1) {
+  background-image: url("../images/202504150920443221.png");
+}
+.visual .inner ul li a:nth-child(2) {
+  background-image: url("../images/202401030858473320.jpg");
+}
+.visual .inner ul li a .visual_text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-35%);
+  left: 120px;
+  color: white;
+}
+.visual .inner ul li a .visual_text strong {
+  font-size: 55px;
+  font-weight: 600;
+}
+.visual .inner ul li a .visual_text p {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.section_head h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.section_head .explanation {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.color_box {
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  letter-spacing: -10%;
+  background-color: #e0f55c;
+}
+
+.trans_box {
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  letter-spacing: -10%;
+  border: 1px solid #000;
+}
+
+.section1 .inner {
+  width: 100%;
+  height: 1100px;
+  max-width: 1440px;
+  padding-top: 100px;
+  overflow-y: hidden;
+  position: relative;
+}
+.section1 .inner .con_wrap {
+  display: flex;
+  position: absolute;
+  top: 400px;
+}
+.section1 .inner .con_wrap .content {
+  background: white;
+  width: 336px;
+  height: 585px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+.section1 .inner .con_wrap .content img {
+  width: 335px;
+  height: 335px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.section1 .inner .con_wrap .content .con_text {
+  margin: 30px;
+}
+.section1 .inner .con_wrap .content .con_text .label_wrap {
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+.section1 .inner .con_wrap .content .con_text strong {
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  font-weight: 700;
+}
+.section1 .inner .con_wrap .content .con_text p {
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  line-height: 1.7;
+}
+.section1 .inner .con_wrap .content .con_text p .icon-time {
+  width: 16px;
+  height: auto;
+  transform: translateY(5px);
+}
+.section1 .inner .con_wrap .content .con_text p:first-child::after {
+  content: "";
+  border: 1px solid #000;
+}
+.section1 .inner .con_wrap .content .con_text p:last-child {
+  font-size: 18px;
+  letter-spacing: -0.05em;
+  line-height: 1.7;
+  position: relative;
+  font-weight: 700;
+}
+.section1 .inner .con_wrap .content .con_text p:last-child img {
+  width: 36px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.section1 .sec1_btn_Wrap span {
+  position: absolute;
+  top: 60%;
+}
+.section1 .sec1_btn_Wrap .prev {
+  left: 70px;
+}
+.section1 .sec1_btn_Wrap .next {
+  right: 70px;
+}

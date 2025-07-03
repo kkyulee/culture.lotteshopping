@@ -1,0 +1,96 @@
+@mixin font-style($fz, $ls, $fw) {
+  font-size: $fz;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  margin-bottom: 20px;
+}
+@mixin headstyle() {
+  @include font-style(40px, -0.05em, 300);
+}
+@mixin textstyle() {
+  @include font-style(16px, 0, 200);
+}
+.footer_wrap {
+  .inner {
+    width: 1440px;
+    height: auto;
+    .foot_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #585454;
+      .top_LBox {
+        h2 {
+          @include headstyle();
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          span {
+            @include textstyle();
+          }
+        }
+      }
+      .top_RBox {
+        text-align: right;
+        .phone {
+          strong {
+            @include headstyle();
+          }
+          p {
+            @include textstyle();
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+    .foot_bottom {
+      padding-top: 30px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      color: #9c9796;
+      font-size: 14px;
+      .bot_left {
+        .link_area {
+          display: flex;
+          a {
+            color: #9c9796;
+            @include textstyle();
+            margin-right: 20px;
+            &:first-child {
+              font-weight: 600;
+              color: white;
+            }
+          }
+        }
+        .addr {
+          display: flex;
+          p {
+            margin-right: 10px;
+          }
+        }
+      }
+      .bot_right {
+        .link_site {
+          width: 200px;
+          justify-content: space-between;
+          @include textstyle();
+          border: 1px solid #585454;
+          border-radius: 5px;
+          display: flex;
+          font-size: 18px;
+          color: white;
+          padding: 10px 20px;
+        }
+        .foot_logo {
+          img {
+            width: 210px;
+          }
+        }
+      }
+    }
+  }
+}

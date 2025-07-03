@@ -1,0 +1,11 @@
+.depth2 {
+  height: 0;
+  animation: expandHeight 2s forwards;
+}
+@keyframes expandHeight {
+  from {
+    height: 0;
+  }
+  to {
+  }
+}

@@ -1,0 +1,172 @@
+$background: #f7f2ef;
+
+.visual {
+  position: relative;
+  .inner {
+    width: 1700px;
+    margin-top: 20px;
+    height: 600px;
+    ul {
+      position: relative;
+      li {
+        position: absolute;
+
+        a {
+          position: relative;
+          display: block;
+          width: 1700px;
+          height: 600px;
+          border-radius: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          &:nth-child(1) {
+            background-image: url("../images/202504150920443221.png");
+          }
+          &:nth-child(2) {
+            background-image: url("../images/202401030858473320.jpg");
+          }
+          .visual_text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-35%);
+            left: 120px;
+            color: white;
+            strong {
+              font-size: 55px;
+              font-weight: 600;
+            }
+            p {
+              margin-top: 25px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section_head {
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .explanation {
+    font-size: 64px;
+    font-weight: 100;
+  }
+}
+@mixin btn {
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  letter-spacing: -10%;
+}
+.color_box {
+  @include btn();
+  background-color: #e0f55c;
+}
+.trans_box {
+  @include btn();
+  border: 1px solid #000;
+}
+@mixin content {
+  background: white;
+  width: 336px;
+  height: 585px;
+  border-radius: 10px;
+
+  img {
+    width: 335px;
+    height: 335px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .con_text {
+    margin: 30px;
+    .label_wrap {
+      margin-bottom: 10px;
+      margin-right: 5px;
+    }
+    strong {
+      font-size: 20px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      font-weight: 700;
+    }
+    .type_div {
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: -0.05em;
+      line-height: 1.7;
+      .icon-time {
+        width: 16px;
+        height: auto;
+        transform: translateY(5px);
+      }
+      &:first-child {
+        &::after {
+          content: "";
+          border: 1px solid #000;
+        }
+      }
+    }
+    p {
+      &:last-child {
+        font-size: 18px;
+        letter-spacing: -0.05em;
+        line-height: 1.7;
+        position: relative;
+        font-weight: 700;
+        img {
+          width: 36px;
+          height: auto;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+// 섹션 공통요소
+.section1 {
+  .inner {
+    width: 100%;
+    height: 1100px;
+    max-width: 1440px;
+    padding-top: 100px;
+    overflow-y: hidden;
+    position: relative;
+    .con_wrap {
+      display: flex;
+      position: absolute;
+      top: 400px;
+      .content {
+        @include content();
+        margin-right: 30px;
+      }
+    }
+  }
+  .sec1_btn_Wrap {
+    span {
+      position: absolute;
+      top: 60%;
+    }
+    .prev {
+      left: 70px;
+    }
+    .next {
+      right: 70px;
+    }
+  }
+}
