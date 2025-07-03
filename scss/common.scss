@@ -2,6 +2,9 @@ $background: #f7f2ef;
 body {
   background-color: $background;
 }
+#header {
+  z-index: 99;
+}
 .inner {
   width: 1400px;
   margin: auto;

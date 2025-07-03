@@ -1,9 +1,11 @@
 $background: #f7f2ef;
+
 .depth_bg {
   height: 510px;
   width: 100%;
   background: rgb(255, 255, 255);
   position: absolute;
+  z-index: 10;
 
   opacity: 0;
   transform: translateY(-20px);
@@ -22,17 +24,19 @@ $background: #f7f2ef;
 .head_wrap {
   .inner {
     width: 1700px;
-    background: $background;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
     position: relative;
+    z-index: 99;
   }
   .nav {
     display: flex;
     li {
       .depth1 {
+        color: black;
         margin-left: 60px;
         font-size: 16px;
         font-weight: 800;

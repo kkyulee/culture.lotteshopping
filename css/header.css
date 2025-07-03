@@ -3,6 +3,7 @@
   width: 100%;
   background: rgb(255, 255, 255);
   position: absolute;
+  z-index: 10;
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
@@ -20,17 +21,19 @@
 
 .head_wrap .inner {
   width: 1700px;
-  background: #f7f2ef;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px;
   position: relative;
+  z-index: 99;
 }
 .head_wrap .nav {
   display: flex;
 }
 .head_wrap .nav li .depth1 {
+  color: black;
   margin-left: 60px;
   font-size: 16px;
   font-weight: 800;
