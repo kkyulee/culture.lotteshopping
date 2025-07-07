@@ -72,6 +72,29 @@
   border: 1px solid #000;
 }
 
+.img_hover {
+  display: block;
+  width: 335px;
+  height: 335px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.con_img {
+  display: block;
+  width: 335px;
+  height: 335px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+  flex-shrink: 0;
+}
+.con_img:hover {
+  transform: scale(1.2);
+}
+
 .section1 .inner,
 .section3 .inner {
   width: 100%;
@@ -95,8 +118,8 @@
   border-radius: 10px;
   margin-right: 30px;
 }
-.section1 .inner .con_wrap .content img,
-.section3 .inner .con_wrap .content img {
+.section1 .inner .con_wrap .content .con_img,
+.section3 .inner .con_wrap .content .con_img {
   width: 335px;
   height: 335px;
   border-radius: 10px;
@@ -212,7 +235,7 @@
 .section2 .sec_wrap .sec2_left .select_menu p {
   display: inline;
 }
-.section2 .sec_wrap .sec2_left .img {
+.section2 .sec_wrap .sec2_left .con_img {
   position: absolute;
   left: 0;
 }
@@ -223,18 +246,13 @@
 .section2 .sec_wrap .sec2_right .card_list .card {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: white;
   border-radius: 10px;
-  width: 742px;
-  height: 340px;
+  width: 760px;
   overflow: hidden;
   margin-bottom: 3.75rem;
   color: #000;
-}
-.section2 .sec_wrap .sec2_right .card_list .card img {
-  width: 21.875rem;
-  border-radius: 10px;
 }
 .section2 .sec_wrap .sec2_right .card_list .card .con_text {
   border-radius: 10px;
@@ -244,6 +262,13 @@
   font-weight: 350;
   font-size: 24px;
   line-height: 36px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  font-weight: 700;
 }
 .section2 .sec_wrap .sec2_right .card_list .card .con_text .type_div {
   display: flex;

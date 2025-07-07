@@ -142,13 +142,34 @@ $background: #f7f2ef;
   height: 585px;
   border-radius: 10px;
 
-  img {
+  .con_img {
     width: 335px;
     height: 335px;
     border-radius: 10px;
     object-fit: cover;
   }
   @include textbox();
+}
+.img_hover {
+  display: block;
+  width: 335px;
+  height: 335px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+.con_img {
+  display: block;
+  width: 335px;
+  height: 335px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+  flex-shrink: 0;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 // 섹션 공통요소
 .section1,
@@ -212,7 +233,7 @@ $background: #f7f2ef;
         .xi-angle-down {
         }
       }
-      .img {
+      .con_img {
         position: absolute;
         left: 0;
       }
@@ -225,17 +246,13 @@ $background: #f7f2ef;
         .card {
           position: relative;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           background: white;
           border-radius: 10px;
-          width: 742px;
-          height: 340px;
+          width: 760px;
           overflow: hidden;
           margin-bottom: 3.75rem;
-          img {
-            width: 21.875rem;
-            border-radius: 10px;
-          }
+
           .con_text {
             border-radius: 10px;
             padding: 4.5rem 2.25rem;
@@ -243,6 +260,13 @@ $background: #f7f2ef;
               font-weight: 350;
               font-size: 24px;
               line-height: 36px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: break-word;
+              font-weight: 700;
             }
             .type_div {
               display: flex;
@@ -315,10 +339,9 @@ $background: #f7f2ef;
       height: 15rem;
       flex-shrink: 0;
       position: relative;
-&:hover{
+      &:hover {
         border: 1px solid #b7acac;
-
-}
+      }
       .text {
         display: flex;
         flex-direction: column;
