@@ -73,19 +73,7 @@ $background: #f7f2ef;
   @include btn();
   border: 1px solid #000;
 }
-@mixin content {
-  background: white;
-  width: 336px;
-  height: 585px;
-  border-radius: 10px;
-
-  img {
-    width: 335px;
-    height: 335px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
+@mixin textbox {
   .con_text {
     margin: 30px;
     .label_wrap {
@@ -103,40 +91,64 @@ $background: #f7f2ef;
       font-weight: 700;
     }
     .type_div {
-    }
-    p {
-      font-size: 16px;
-      letter-spacing: -0.05em;
-      line-height: 1.7;
-      .icon-time {
-        width: 16px;
-        height: auto;
-        transform: translateY(5px);
-      }
-      &:first-child {
-        &::after {
-          content: "";
-          border: 1px solid #000;
-        }
-      }
-    }
-    p {
-      &:last-child {
-        font-size: 18px;
+      display: flex;
+      p {
+        display: inline;
+        font-size: 16px;
         letter-spacing: -0.05em;
         line-height: 1.7;
+        padding-right: 20px;
         position: relative;
-        font-weight: 700;
-        img {
-          width: 36px;
-          height: auto;
-          position: absolute;
-          bottom: 0;
-          right: 0;
+        &:first-child {
+          &::after {
+            position: absolute;
+            content: "";
+            background: #d0d0d0;
+            height: 14px;
+            width: 1px;
+            top: 6px;
+            right: 10px;
+          }
         }
+      }
+    }
+
+    .icon-time {
+      width: 16px;
+      height: auto;
+      transform: translateY(5px);
+    }
+
+    .price {
+      font-size: 18px;
+      letter-spacing: -0.05em;
+      line-height: 1.7;
+      position: relative;
+      font-weight: 700;
+      margin-top: 10px;
+      img {
+        width: 36px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
       }
     }
   }
+}
+@mixin content {
+  background: white;
+  width: 336px;
+  height: 585px;
+  border-radius: 10px;
+
+  img {
+    width: 335px;
+    height: 335px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  @include textbox();
 }
 // 섹션 공통요소
 .section1,
@@ -172,7 +184,188 @@ $background: #f7f2ef;
   }
 }
 .section2 {
-  background: #8d786c;
+  background: #414146;
   color: white;
+  .sec_wrap {
+    display: flex;
+    .sec2_left {
+      position: relative;
+      width: 59.6525rem;
+      background-image: url("../images/202304260545030363.jpg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      .select_menu {
+        position: absolute;
+        top: 7.62rem;
+        left: 14.66rem;
+        width: 196px;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 1px solid #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+        p {
+          display: inline;
+        }
+        .xi-angle-down {
+        }
+      }
+      .img {
+        position: absolute;
+        left: 0;
+      }
+    }
+    .sec2_right {
+      margin-left: 5.27rem;
+      width: 50%;
+
+      .card_list {
+        .card {
+          position: relative;
+          display: flex;
+          align-items: center;
+          background: white;
+          border-radius: 10px;
+          width: 742px;
+          height: 340px;
+          overflow: hidden;
+          margin-bottom: 3.75rem;
+          img {
+            width: 21.875rem;
+            border-radius: 10px;
+          }
+          .con_text {
+            border-radius: 10px;
+            padding: 4.5rem 2.25rem;
+            strong {
+              font-weight: 350;
+              font-size: 24px;
+              line-height: 36px;
+            }
+            .type_div {
+              display: flex;
+              p {
+                display: inline;
+                font-size: 16px;
+                letter-spacing: -0.05em;
+                line-height: 1.7;
+                padding-right: 20px;
+                position: relative;
+                margin-top: 5px;
+                &:first-child {
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    background: #d0d0d0;
+                    height: 14px;
+                    width: 1px;
+                    top: 6px;
+                    right: 10px;
+                  }
+                }
+              }
+            }
+            .icon-time {
+              width: 16px;
+              height: auto;
+              transform: translateY(5px);
+            }
+            .price {
+              font-size: 18px;
+              letter-spacing: -0.05em;
+              line-height: 1.7;
+              position: relative;
+              font-weight: 700;
+              margin-top: 10px;
+              img {
+                width: 36px;
+                height: auto;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+              }
+            }
+          }
+
+          color: #000;
+        }
+      }
+    }
+  }
 }
 // check
+.section4 {
+  img {
+    width: 1400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+.section5 {
+  .info_list {
+    display: flex;
+    align-items: center;
+    .info_card {
+      border: 1px solid #d8c9c9;
+      padding: 2.62rem;
+      border-radius: 10px;
+      width: 18rem;
+      height: 15rem;
+      flex-shrink: 0;
+      position: relative;
+&:hover{
+        border: 1px solid #b7acac;
+
+}
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+          font-size: 26px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+          font-weight: 800;
+          margin-bottom: 0.69rem;
+        }
+        .info {
+          font-weight: 400;
+          line-height: 26px;
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.6);
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; /* 두 줄까지만 보여주고 말줄임 */
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+
+          margin-top: 20px;
+        }
+        .date {
+          margin-top: 3.31rem;
+          color: rgba(0, 0, 0, 0.6);
+          position: absolute;
+          bottom: 30px;
+        }
+      }
+    }
+  }
+  .info_plus {
+    font-size: 1.5rem;
+    margin-top: 2.37rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    p {
+      margin-right: 10px;
+    }
+  }
+}
