@@ -10,3 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// visual
+const viLis = document.querySelectorAll(".visual .inner ul li");
+const prevBtn=document.querySelector()
+const showSlide=()=>{
+
+}

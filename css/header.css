@@ -38,9 +38,13 @@
   font-size: 16px;
   font-weight: 800;
 }
+.head_wrap .nav li .depth2 {
+  z-index: 999;
+}
 .head_wrap .nav li .depth2 .nav.dep {
   position: absolute;
   background: white;
+  width: 100%;
   top: 100%;
   left: 100px;
   padding-top: 100px;
@@ -56,6 +60,7 @@
 .head_wrap .nav li .depth2 .nav.dep.active {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 .head_wrap .head_right {
   display: flex;

@@ -42,9 +42,11 @@ $background: #f7f2ef;
         font-weight: 800;
       }
       .depth2 {
+        z-index: 999;
         .nav.dep {
           position: absolute;
           background: white;
+          width: 100%;
           top: 100%;
           left: 100px;
           padding-top: 100px;
@@ -60,6 +62,7 @@ $background: #f7f2ef;
           &.active {
             opacity: 1;
             transform: translateY(0);
+            pointer-events: auto;
           }
         }
       }
