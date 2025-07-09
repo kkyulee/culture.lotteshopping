@@ -13,10 +13,12 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 999;
 }
 .depth_bg.active {
   opacity: 1;
   transform: translateY(0);
+  z-index: 99;
 }
 
 .head_wrap .inner {
@@ -37,6 +39,7 @@
   margin-left: 60px;
   font-size: 16px;
   font-weight: 800;
+  padding: 45px 20px;
 }
 .head_wrap .nav li .depth2 {
   z-index: 999;
@@ -44,7 +47,7 @@
 .head_wrap .nav li .depth2 .nav.dep {
   position: absolute;
   background: white;
-  width: 100%;
+  width: 600px;
   top: 100%;
   left: 100px;
   padding-top: 100px;
@@ -61,6 +64,9 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+.head_wrap .nav li .depth2 .nav.dep li {
+  margin-bottom: 20px;
 }
 .head_wrap .head_right {
   display: flex;
